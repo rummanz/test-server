@@ -11,8 +11,7 @@ import { dashboardRoutes } from "./routes/DashboardRoutes.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8080
-
+const port = process.env.PORT;
 
 app.use(
   cors({
@@ -37,6 +36,3 @@ app.use("/api/dashboard", dashboardRoutes);
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
-
-module.exports = app;
-
